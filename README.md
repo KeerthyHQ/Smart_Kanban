@@ -107,7 +107,7 @@ The backend securely communicates with the Google Gemini API, ensuring the API k
 
 ### AI Workspace
 
-![AI Workspace](./screenshots/ai-workspace1.png)
+![AI Workspace](./screenshots/AI-workspace.png)
 
 ---
 
