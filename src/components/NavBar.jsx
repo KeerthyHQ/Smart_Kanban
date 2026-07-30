@@ -74,7 +74,7 @@ const Navbar = ({
                 text-slate-700
               "
             >
-              Kanban Flow
+              Smart Kanban
             </h1>
 
             
