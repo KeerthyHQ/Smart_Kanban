@@ -1,9 +1,15 @@
+const API_URL = import.meta.env.VITE_API_URL;
+
 export const askAI = async (action, message, board) => {
   try {
-    const response = await fetch("/api/ai", {
+    const response = await fetch(`${API_URL}/api/ai`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ action, message, board }),
+      body: JSON.stringify({ 
+        action, 
+        message, 
+        board 
+      }),
     });
 
     const rawBody = await response.text();

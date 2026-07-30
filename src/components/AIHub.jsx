@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect,useRef } from "react";
 import { askAI } from "../services/ai";
+
 
 const tools = [
   { action: "priority", label: "🎯 Suggest priority" },
@@ -15,40 +16,19 @@ const AIHub = ({ board }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const normalizeSpacing = (value) =>
-    value
-      .replace(/\*{3,}/g, "")
-      .replace(/\*\*([^*]+)\*\*/g, "$1")
-      .replace(/\*\s*\[\s*\]\s*/g, "- [ ] ")
-      .replace(/\*\s*\[x\s*\]\s*/gi, "- [x] ")
-      .replace(/\*\s+([A-Za-z])/g, "- $1")
-      .replace(/([\.,;:!\?])([^\s\n])/g, "$1 $2")
-      .replace(/\s{2,}/g, " ")
-      .replace(/\s+\n/g, "\n")
-      .replace(/\n\s+/g, "\n")
-      .trim();
+  const chatContainerRef = useRef(null);
 
-  const formatContent = (value) => {
-    if (!value) return "";
 
-    return normalizeSpacing(value)
-      .split("\n")
-      .map((line) => {
-        const trimmed = line.trim();
-        if (trimmed.startsWith("- [ ]") || trimmed.startsWith("- [x]")) {
-          return trimmed;
-        }
-        if (/^\d+\./.test(trimmed)) {
-          return trimmed.replace(/^(\d+)\.\s*/, "$1. ");
-        }
-        if (/^-\s+/.test(trimmed)) {
-          return trimmed;
-        }
-        return trimmed;
-      })
-      .join("\n");
-  };
 
+  const formatContent = (value) => value?.trim() || "";
+
+  useEffect(() => { 
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop =
+        chatContainerRef.current.scrollHeight;
+    }
+  }, [chatHistory]);
+  
   // RUN SELECTED TOOL
   const runTool = async (action) => {
     //edge cases
@@ -175,7 +155,9 @@ const AIHub = ({ board }) => {
             </div>
 
             <div className="mt-5 flex h-[520px] flex-col rounded-[28px] border border-slate-200 bg-slate-50 p-4">
-              <div className="flex-1 space-y-3 overflow-y-auto pr-2">
+              <div
+              ref={chatContainerRef}
+              className="flex-1 space-y-3 overflow-y-auto pr-2">
                 {chatHistory.length === 0 ? (
                   <div className="rounded-3xl bg-white px-4 py-5 text-sm text-slate-500 shadow-sm">
                     Start the conversation by asking a question, then the AI
