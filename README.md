@@ -53,8 +53,8 @@ An AI-powered Kanban board built with **React, Express, Tailwind CSS, and Google
 - Google Gemini API
 
 ### Deployment
-- Frontend: Vercel *(Coming Soon)*
-- Backend: Render *(Coming Soon)*
+- Frontend: Vercel 
+- Backend: Render 
 
 ---
 
@@ -107,7 +107,7 @@ The backend securely communicates with the Google Gemini API, ensuring the API k
 
 ### AI Workspace
 
-![AI Workspace](./screenshots/AI_Tools.png)
+!(./screenshots/AI_Tools.png)
 
 ---
 
@@ -148,7 +148,7 @@ npm run dev
 ### Start the backend
 
 ```bash
-node server/server.js
+npm run server
 ```
 
 ---
