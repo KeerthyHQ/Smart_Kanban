@@ -10,6 +10,14 @@ An AI-powered Kanban board built with **React, Express, Tailwind CSS, and Google
 ![Node.js](https://img.shields.io/badge/Node.js-22-339933?logo=node.js)
 ![Gemini AI](https://img.shields.io/badge/Google-Gemini_AI-4285F4?logo=google)
 
+## 🔗 Live Demo
+
+**Frontend:** https://smart-kanban-ai.vercel.app/
+
+**Backend API:** https://smart-kanban-api.onrender.com
+
+**GitHub Repository:** https://github.com/KeerthyHQ/Smart_Kanban
+
 
 ## ✨ Features
 
