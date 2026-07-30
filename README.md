@@ -113,14 +113,14 @@ The backend securely communicates with the Google Gemini API, ensuring the API k
 
 ### AI Chat Assistant
 
-![AI Chat](./screenshots/AI_chat1.png)
-![AI Chat](./screenshots/AI_chat3.png)
+![AI Chat](./screenshots/AI-chat1.png)
+![AI Chat](./screenshots/AI-chat3.png)
 
 ---
 
 ### Board Summary
 
-![Board Summary](./screenshots/AI_summary.png)
+![Board Summary](./screenshots/AI-summary.png)
 
 ---
 
