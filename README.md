@@ -1,16 +1,228 @@
-# React + Vite
+# 🚀 Smart Kanban
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered Kanban board built with **React, Express, Tailwind CSS, and Google Gemini AI** that helps users organize tasks, prioritize work, and improve productivity through intelligent task analysis.
 
-Currently, two official plugins are available:
+---
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-06B6D4?logo=tailwindcss)
+![Express](https://img.shields.io/badge/Express.js-Backend-000000?logo=express)
+![Node.js](https://img.shields.io/badge/Node.js-22-339933?logo=node.js)
+![Gemini AI](https://img.shields.io/badge/Google-Gemini_AI-4285F4?logo=google)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 📋 Task Management
+- Create, edit, and delete tasks
+- Drag & drop tasks across columns
+- Priority labels (High, Medium, Low)
+- Search tasks instantly
+- Filter tasks by priority
+- Local storage persistence
+- Responsive user interface
 
-## Expanding the ESLint configuration
+### 🤖 AI Workspace
+- 🎯 Suggest task priority
+- 📋 Break complex tasks into actionable steps
+- 📝 Generate board summaries
+- 💪 Productivity coaching
+- 💬 AI-powered Kanban chat assistant
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 📊 Dashboard
+- Task statistics
+- Progress overview
+- Clean and modern UI
+- Responsive layout
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+- React
+- Vite
+- Tailwind CSS
+- JavaScript (ES6+)
+
+### Backend
+- Node.js
+- Express.js
+
+### AI
+- Google Gemini API
+
+### Deployment
+- Frontend: Vercel *(Coming Soon)*
+- Backend: Render *(Coming Soon)*
+
+---
+
+## 📂 Project Structure
+
+```text
+smart-kanban
+│
+├── public/
+├── server/
+│   └── server.js
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── services/
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── package.json
+├── tailwind.config.js
+└── README.md
+```
+
+---
+
+## 🤖 AI Features
+
+The AI assistant understands your current Kanban board and can:
+
+- Analyze task priority
+- Break tasks into implementation steps
+- Summarize project progress
+- Identify risks
+- Suggest next actions
+- Answer project-related questions
+- Provide productivity guidance
+
+The backend securely communicates with the Google Gemini API, ensuring the API key is never exposed to the client.
+
+---
+
+## 📸 Screenshots
+
+### Dashboard
+
+![Dashboard](./screenshots/dashboard.png)
+
+---
+
+### AI Workspace
+
+![AI Workspace](./screenshots/AI_Tools.png)
+
+---
+
+### AI Chat Assistant
+
+![AI Chat](./screenshots/AI_chat1.png)
+![AI Chat](./screenshots/AI_chat3.png)
+
+---
+
+### Board Summary
+
+![Board Summary](./screenshots/AI_summary.png)
+
+---
+
+## ⚙️ Installation
+
+### Clone the repository
+
+```bash
+git clone https://github.com/KeerthyHQ/smart-kanban.git
+cd smart-kanban
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the frontend
+
+```bash
+npm run dev
+```
+
+### Start the backend
+
+```bash
+node server/server.js
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file inside the project root.
+
+```env
+PORT=3001
+GEMINI_API_KEY=YOUR_API_KEY
+GEMINI_MODEL=gemini-flash-latest
+```
+
+---
+
+## 💡 How It Works
+
+```text
+React Frontend
+      │
+      ▼
+Express Backend
+      │
+      ▼
+Google Gemini API
+```
+
+The frontend sends AI requests to the Express backend.
+
+The backend securely calls the Gemini API and returns AI-generated responses.
+
+---
+
+## 🚀 Future Enhancements
+
+- User Authentication
+- Cloud Database
+- Team Collaboration
+- Due Dates & Reminders
+- Activity History
+- Dark Mode
+- Analytics Dashboard
+- Export & Import Boards
+
+---
+
+## 📚 Key Concepts Practiced
+
+- React Components
+- React Hooks
+- State Management
+- Drag & Drop UI
+- REST APIs
+- Express.js
+- AI Integration
+- Prompt Engineering
+- Environment Variables
+- Responsive Design
+- Local Storage
+- Component Architecture
+
+---
+
+## 👨‍💻 Author
+
+**Keerthika M**
+
+GitHub: [KeerthyHQ](https://github.com/KeerthyHQ)
+
+LinkedIn: [Keerthika M](https://www.linkedin.com/in/keerthika-m-3b51b9127/)
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
